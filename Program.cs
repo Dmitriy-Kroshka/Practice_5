@@ -1,35 +1,24 @@
 ﻿using System;
-namespace Practice_5_2
+
+namespace Practice_5_1
 {
     class Program
     {
         static void Main()
         {
-            Console.Write("Введите своё предложение: ");
+            Console.Write("Введите ваше предложение: ");
             string inputText = Console.ReadLine();
-            Console.WriteLine(ReverseString(inputText));
+            SplitText(inputText);
         }
-
-        static string ReverseString(string inputText)
-        {
-            string[] stringParts =  SplitText(inputText) ;
-            string resultString = "";
-
-            for (int i = stringParts.Length -1; i >= 0; i--)
-            {
-                resultString += stringParts[i] + " ";
-            }
-            return resultString;
-        }
-        static string[] SplitText(string text)
+        static string SplitText(string text)
         {
             string someText = text;
             string[] subs = someText.Split(' ');
             foreach (string sub in subs)
             {
-                return subs;
+                Console.WriteLine(sub);
             }
-            return subs;
+            return someText;
         }
     }
 }
