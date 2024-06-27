@@ -25,7 +25,7 @@ namespace Practice_5_2
         {
             string someText = text;
             string[] subs = someText.Split(' ');
-            foreach (string sub in subs)
+            for (int i = 0; i < subs.Length; i++)
             {
                 return subs;
             }
