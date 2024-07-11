@@ -10,26 +10,21 @@ namespace Practice_5_2
             Console.WriteLine(ReverseString(inputText));
         }
 
-        static string ReverseString(string inputText)
-        {
-            string[] stringParts =  SplitText(inputText) ;
-            string resultString = "";
-
-            for (int i = stringParts.Length -1; i >= 0; i--)
-            {
-                resultString += stringParts[i] + " ";
-            }
-            return resultString;
-        }
         static string[] SplitText(string text)
         {
             string someText = text;
             string[] subs = someText.Split(' ');
-            for (int i = 0; i < subs.Length; i++)
-            {
-                return subs;
-            }
             return subs;
+        }
+        static string ReverseString(string inputText)           //я не понял как использовать какой-то встроенный метод reverse
+        {
+            string[] stringParts = SplitText(inputText);        //создаём массив строк, присвоив ему значение разделённой строки
+            string resultString = "";                           //создаём пустую строку
+            for (int i = stringParts.Length - 1; i >= 0; i--)   //перебираем массив с конца
+            {
+                resultString += stringParts[i] + " ";           //в пустую строку добавляем элементы массива, начиная с последнего
+            }
+            return resultString;                                //возвращаем перевёрнутую строку
         }
     }
 }
