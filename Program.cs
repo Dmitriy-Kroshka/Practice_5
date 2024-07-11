@@ -14,9 +14,9 @@ namespace Practice_5_1
         {
             string someText = text;
             string[] subs = someText.Split(' ');
-            foreach (string sub in subs)
+            for (int i = 0; i < subs.Length; i++)
             {
-                Console.WriteLine(sub);
+                Console.WriteLine(subs[i]);
             }
             return someText;
         }
